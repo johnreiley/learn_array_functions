@@ -19,12 +19,12 @@ console.log("After the pop, size = " + array.length);
 // Real World Example!
 let shoppingList = {
     list: ['chips', 'salsa', 'sour cream', 'oj'],
-    getNextItem = function () {
-        return list.pop();
+    getNextItem: function () {
+        return this.list.pop();
     }
 };
 
-let nextItem = shoppingList.getNextItem; // What's the next item find?
+let nextItem = shoppingList.getNextItem(); // What's the next item find?
 console.log("Next item is: " + nextItem);
 // oj
 //------------------------------------------------------------------------
