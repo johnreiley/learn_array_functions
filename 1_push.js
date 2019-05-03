@@ -8,10 +8,12 @@ What does it return?
     - The length of the array including the new element
 */
 //------------------------------------------------------------------------
-// How can I use it?
+// How can I use it? -- If you have a class list of people and you need 
+// to add a new student.
 let array = ['element1', 'element2', 'element3'];
 console.log(array.push('element4', 'element5'));
 console.log(array);
+
 //------------------------------------------------------------------------
 // Real World Example!
 let student = {

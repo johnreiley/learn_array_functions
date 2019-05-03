@@ -7,7 +7,8 @@ What does it return?
     - The last element in the array
 */
 //------------------------------------------------------------------------
-// How can I use it?
+// How can I use it? -- If you have a shopping list and want to remove
+// the next item and view it
 let array = ['e1', 'e2', 'e3'];
 console.log("Before the pop, size = " + array.length);
 // 3

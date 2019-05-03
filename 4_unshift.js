@@ -7,7 +7,8 @@ What does it return?
     - The new length of the array
 */
 //------------------------------------------------------------------------
-// How can I use it?
+// How can I use it? -- If you have a shopping list and want to add an
+// item to it.
 let array = ['e1', 'e2', 'e3'];
 console.log("The array: " + array);
 // e1, e2, e3

@@ -7,7 +7,8 @@ What does it return?
     - The first element of the array
 */
 //------------------------------------------------------------------------
-// How can I use it?
+// How can I use it? -- If you have a help lab on campus with a queue and 
+// want to set the next person to currently serving
 let array = ['e1', 'e2', 'e3'];
 console.log("Length before shift(): " + array.length);
 // 3
