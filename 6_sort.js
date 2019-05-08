@@ -1,7 +1,7 @@
 /*
 What does it do?
-    - Sorts the array by UTF-16 Unicode order when call with no parameters
-    - Accepts a function as a parameter that can be used to custom sort
+    - Sorts the array by UTF-16 Unicode order when called with no parameters
+    - Accepts a callback function as a parameter that can be used to custom sort
 Does it edit the current array?
     - Yes
 What does it return?
@@ -11,6 +11,8 @@ sort them alphabetically.
 */
 //------------------------------------------------------------------------
 // Real World Example!
+
+// with a callback function
 let students = [{
         firstName: "Bob",
         lastName: "Marley",
@@ -49,3 +51,11 @@ console.log("Class List After Sort:")
 for (let student of students) {
     console.log(student.lastName);
 }
+
+
+//without a callback function
+let studentsArray = ["Josh McKinney", "Braeden Eddington", "Harry Potter", "Zorro"];
+
+console.log("Class List Before Sort: " + studentsArray)
+studentsArray.sort();
+console.log("Class List After Sort: " + studentsArray)
