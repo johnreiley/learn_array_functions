@@ -9,6 +9,7 @@ What does it return?
 How can I use it?
     - If I have an array of data that I want to read and copy to a new array
 */
+//------------------------------------------------------------------------
 // Real World Example!
 let dataArray = ["!!!!", "@@@@", "####", "$$$$", "%%%%"];
 let arrayCopy = [];
