@@ -20,7 +20,7 @@ let people = [{
     },
     {
         name: "Gregory Duggins",
-        occupation: "pilot"
+        occupation: "mechanic"
     },
     {
         name: "David Peyton",
@@ -41,11 +41,15 @@ let people = [{
 ];
 
 let hasMechanic = people.some(function (person) {
-    return person.occupation === "mechanic"
+    return person.occupation === "mechanic";
 });
 
 if (hasMechanic) {
-    console.log("There's a mechanic! Hope isn't completely lost!")
+    let mechanics = people.filter(function (person) {
+            return person.occupation === "mechanic";
+        })
+        .map(m => m.name);
+    console.log("The mechanics are: " + mechanics)
 } else {
     console.log("Looks like you're gonna die. Sorry.")
 }
