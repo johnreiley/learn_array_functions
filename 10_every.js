@@ -1,7 +1,8 @@
 /*
 What does it do?
     - Goes through the given array and checks each value
-    against the callback function parameter
+    against the callback function parameter to test whether or 
+    not every value passes.  It is like an AND logic gate
 Does it edit the current array?
     - No
 What does it return?
