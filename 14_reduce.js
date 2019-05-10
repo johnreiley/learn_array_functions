@@ -14,7 +14,10 @@ How can I use it?
 */
 //------------------------------------------------------------------------
 // Real World Example!
-let grades = [67.12, 90.34, 82.62, 96.40, 100.00, 98.97, 93.11, 62.30, 77.98]
+
+// WITHOUT Starting acc value
+let classOneGrades = [67.12, 90.34, 82.62, 96.40, 100.00, 98.97, 93.11, 62.30, 77.98]
+let classTwoGrades = [64.12, 20.34, 92.62, 76.40, 102.00, 93.97, 83.11, 72.30, 67.98]
 
 function calculateClassGradeAvg(grades) {
     let sum = grades.reduce(function (acc, curr) {
@@ -24,5 +27,15 @@ function calculateClassGradeAvg(grades) {
     return avg;
 }
 
-let classGradeAvg = calculateClassGradeAvg(grades);
-console.log("Class Grade Average: " + classGradeAvg + "%")
+let classGradeAvg = calculateClassGradeAvg(classOneGrades);
+console.log("Class 1 Grade Average: " + classGradeAvg + "%")
+
+//WITH Starting acc value - find the average of two classes
+let classTwoGradeSum = classTwoGrades.reduce(function (acc, curr) {
+    return acc + curr;
+})
+let totalGradeSum = classOneGrades.reduce(function (acc, curr) {
+    return acc + curr;
+}, classTwoGradeSum)
+let totalGradeAverage = (totalGradeSum / (classOneGrades.length + classTwoGrades.length)).toFixed(2);
+console.log("Total Grade Average: " + totalGradeAverage + "%")
