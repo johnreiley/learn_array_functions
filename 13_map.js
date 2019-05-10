@@ -36,21 +36,15 @@ let fruits = [{
     },
 ]
 
-// function convertToJuice(fruitItem) {
-//     let fruitJuice = {
-//         juice: fruitItem.fruit + " juice",
-//         ounces: fruitItem.lbs * 4
-//     }
-//     return fruitJuice;
-// }
+function convertToJuice(fruitItem) {
+    let fruitJuice = {
+        juice: fruitItem.fruit + " juice",
+        ounces: (fruitItem.lbs * 3).toFixed(1)
+    }
+    return fruitJuice;
+}
 
-let juices = fruits.map(function convertToJuice(fruitItem) {
-        let fruitJuice = {
-            juice: fruitItem.fruit + " juice",
-            ounces: (fruitItem.lbs * 3).toFixed(1)
-        }
-        return fruitJuice;
-    })
+let juices = fruits.map(convertToJuice)
     .forEach(function (juiceItem) {
         let juiceLabel = juiceItem.juice + ": " + juiceItem.ounces + " oz"
         console.log(juiceLabel);
