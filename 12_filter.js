@@ -11,6 +11,7 @@ How can I use it?
     of the snicker bars.  You put the bag through a filter
     for snickers and all is well.
 */
+//------------------------------------------------------------------------
 // Real World Example!
 let bagOfCandy = [
     "snickers", "twix", "milkyway",
