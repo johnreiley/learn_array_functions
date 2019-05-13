@@ -42,4 +42,11 @@ let isRegistered = students.every(function (student) {
 })
 
 if (isRegistered) console.log("All students are registered");
-else console.log("Not all students are registered");
+else {
+    console.log("Not all students are registered");
+    let unRegisteredStudents = students.filter(student =>
+            student.numRegisteredCredits == 0)
+        .map(s => s.name);
+    console.log("Unregistered Students: " + unRegisteredStudents);
+
+}

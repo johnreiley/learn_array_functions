@@ -41,6 +41,7 @@ for (let student of students) {
 }
 
 let sortedStudents = students.sort(function (a, b) {
+    // sort by a-z
     if (a.lastName == b.lastName) {
         return 0;
     }
