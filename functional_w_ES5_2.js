@@ -29,18 +29,17 @@ let array = [{
 ];
 
 function convertObjectArrayToObject(array) {
-    let object = new Object();
     return array.reduce(function (acc, curr) {
-        if (acc.hasOwnProperty(curr.key)) {
+        if (acc[curr.key] === undefined) {
+            acc[curr.key] = curr.value;
+        } else {
             if (!Array.isArray(acc[curr.key])) {
                 acc[curr.key] = [acc[curr.key]];
             }
             acc[curr.key] = acc[curr.key].concat(curr.value);
-        } else {
-            acc[curr.key] = curr.value;
         }
         return acc;
-    }, object)
+    }, {})
 }
 
 let object = convertObjectArrayToObject(array);
