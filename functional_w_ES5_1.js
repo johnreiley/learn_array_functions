@@ -24,7 +24,11 @@ function convertToCarObject(carDetailsArray) {
     return carDetailsArray.filter(function (item) {
             return item.key != "msrp";
         })
-        .reduce(function (item) {
-
+        .reduce(function (car, carDetail) {
+            car[carDetail.key] = carDetail.value;
+            return car;
         }, {})
 }
+
+carObject = convertToCarObject(carDetailsArray);
+console.log(carObject)
